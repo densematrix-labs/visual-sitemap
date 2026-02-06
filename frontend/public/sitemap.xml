@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://visual-sitemap.demo.densematrix.ai/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visual-sitemap.demo.densematrix.ai/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://visual-sitemap.demo.densematrix.ai/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://visual-sitemap.demo.densematrix.ai/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://visual-sitemap.demo.densematrix.ai/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://visual-sitemap.demo.densematrix.ai/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://visual-sitemap.demo.densematrix.ai/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://visual-sitemap.demo.densematrix.ai/?lang=es"/>
+  </url>
+  <url>
+    <loc>https://visual-sitemap.demo.densematrix.ai/pricing</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
