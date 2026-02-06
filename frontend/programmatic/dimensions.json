@@ -1,0 +1,49 @@
+{
+  "tool": "Visual Sitemap Scanner",
+  "tool_slug": "visual-sitemap",
+  "base_url": "https://visual-sitemap.demo.densematrix.ai",
+  "dimensions": [
+    {
+      "name": "website_type",
+      "name_zh": "网站类型",
+      "values": ["ecommerce", "blog", "corporate", "news", "forum", "saas", "portfolio", "educational", "government", "nonprofit"],
+      "values_display": {
+        "en": ["E-commerce", "Blog", "Corporate", "News", "Forum", "SaaS", "Portfolio", "Educational", "Government", "Nonprofit"],
+        "zh": ["电商网站", "博客", "企业官网", "新闻网站", "论坛", "SaaS平台", "作品集", "教育网站", "政府网站", "非营利组织"]
+      }
+    },
+    {
+      "name": "industry",
+      "name_zh": "行业",
+      "values": ["technology", "finance", "healthcare", "education", "retail", "travel", "food", "real-estate", "automotive", "media"],
+      "values_display": {
+        "en": ["Technology", "Finance", "Healthcare", "Education", "Retail", "Travel", "Food & Beverage", "Real Estate", "Automotive", "Media"],
+        "zh": ["科技", "金融", "医疗", "教育", "零售", "旅游", "餐饮", "房地产", "汽车", "媒体"]
+      }
+    },
+    {
+      "name": "purpose",
+      "name_zh": "用途",
+      "values": ["seo-audit", "competitor-analysis", "site-migration", "content-planning", "link-diagnosis", "ux-review", "technical-audit", "accessibility"],
+      "values_display": {
+        "en": ["SEO Audit", "Competitor Analysis", "Site Migration", "Content Planning", "Link Diagnosis", "UX Review", "Technical Audit", "Accessibility Check"],
+        "zh": ["SEO审计", "竞品分析", "网站迁移", "内容规划", "链接诊断", "用户体验审查", "技术审计", "无障碍检查"]
+      }
+    },
+    {
+      "name": "size",
+      "name_zh": "网站规模",
+      "values": ["small", "medium", "large", "enterprise"],
+      "values_display": {
+        "en": ["Small (< 50 pages)", "Medium (50-200 pages)", "Large (200-1000 pages)", "Enterprise (1000+ pages)"],
+        "zh": ["小型 (< 50页)", "中型 (50-200页)", "大型 (200-1000页)", "企业级 (1000+页)"]
+      }
+    }
+  ],
+  "combinations": [
+    ["website_type", "purpose"],
+    ["industry", "purpose"],
+    ["website_type", "industry"],
+    ["size", "purpose"]
+  ]
+}

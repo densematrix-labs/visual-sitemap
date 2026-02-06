@@ -2,8 +2,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://visual-sitemap.demo.densematrix.ai/sitemap.xml
+Sitemap: https://visual-sitemap.demo.densematrix.ai/sitemap-programmatic.xml
 
 # Disallow admin/API routes
 Disallow: /api/

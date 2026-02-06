@@ -35,3 +35,7 @@ npm-debug.log*
 # Database
 *.db
 *.sqlite3
+
+# Programmatic SEO (generated at build time)
+frontend/public/p/
+frontend/public/sitemap-programmatic.xml
