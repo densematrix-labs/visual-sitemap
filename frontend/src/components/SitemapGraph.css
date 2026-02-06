@@ -1,0 +1,99 @@
+.graph-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background: var(--bg-surface);
+  border: 1px solid var(--phosphor-dim);
+  box-shadow: 
+    inset 0 0 50px rgba(0, 255, 159, 0.03),
+    0 0 1px var(--phosphor);
+  overflow: hidden;
+}
+
+.graph-container svg {
+  display: block;
+  cursor: grab;
+}
+
+.graph-container svg:active {
+  cursor: grabbing;
+}
+
+/* Links */
+.links .link {
+  stroke: var(--phosphor-dim);
+  stroke-width: 1;
+  stroke-opacity: 0.4;
+  transition: stroke-opacity 0.2s;
+}
+
+.links .link:hover {
+  stroke-opacity: 1;
+}
+
+/* Nodes */
+.nodes .node {
+  stroke: var(--bg-deep);
+  stroke-width: 2;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nodes .node:hover {
+  stroke: var(--phosphor);
+  stroke-width: 3;
+}
+
+/* Labels */
+.labels .node-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  fill: var(--text-secondary);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Tooltip */
+.graph-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--phosphor-dim);
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  max-width: 300px;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.15s;
+}
+
+.tooltip-title {
+  color: var(--phosphor);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltip-url {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  word-break: break-all;
+}
+
+/* Hint */
+.graph-hint {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-elevated);
+  border: 1px solid var(--text-muted);
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}

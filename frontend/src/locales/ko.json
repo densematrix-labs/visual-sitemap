@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "비주얼 사이트맵 스캐너",
+    "tagline": "웹사이트의 DNA를 매핑하세요"
+  },
+  "input": {
+    "placeholder": "웹사이트 URL 입력 (예: https://example.com)",
+    "scan": "스캔",
+    "scanning": "스캔 중...",
+    "depth": "크롤링 깊이",
+    "maxPages": "최대 페이지"
+  },
+  "result": {
+    "pages": "페이지",
+    "links": "링크",
+    "time": "스캔 시간",
+    "seconds": "초"
+  },
+  "graph": {
+    "zoom": "스크롤로 확대/축소 • 드래그로 이동",
+    "nodeInfo": "노드를 클릭하여 상세 정보 보기"
+  },
+  "node": {
+    "url": "URL",
+    "title": "제목",
+    "depth": "깊이",
+    "outgoing": "발신 링크",
+    "incoming": "수신 링크"
+  },
+  "export": {
+    "json": "JSON 내보내기",
+    "reset": "새 스캔"
+  },
+  "error": {
+    "invalidUrl": "유효한 URL을 입력해주세요",
+    "crawlFailed": "스캔 실패. 다시 시도해주세요.",
+    "timeout": "스캔 시간 초과. 더 작은 사이트나 낮은 깊이로 시도해주세요."
+  },
+  "footer": {
+    "poweredBy": "Powered by DenseMatrix"
+  }
+}

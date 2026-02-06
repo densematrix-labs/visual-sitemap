@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "ビジュアルサイトマップスキャナー",
+    "tagline": "ウェブサイトのDNAを解析"
+  },
+  "input": {
+    "placeholder": "ウェブサイトURLを入力（例：https://example.com）",
+    "scan": "スキャン",
+    "scanning": "スキャン中...",
+    "depth": "クロール深度",
+    "maxPages": "最大ページ数"
+  },
+  "result": {
+    "pages": "ページ",
+    "links": "リンク",
+    "time": "スキャン時間",
+    "seconds": "秒"
+  },
+  "graph": {
+    "zoom": "スクロールでズーム • ドラッグで移動",
+    "nodeInfo": "ノードをクリックで詳細表示"
+  },
+  "node": {
+    "url": "URL",
+    "title": "タイトル",
+    "depth": "深度",
+    "outgoing": "発信リンク",
+    "incoming": "受信リンク"
+  },
+  "export": {
+    "json": "JSONエクスポート",
+    "reset": "新規スキャン"
+  },
+  "error": {
+    "invalidUrl": "有効なURLを入力してください",
+    "crawlFailed": "スキャンに失敗しました。もう一度お試しください。",
+    "timeout": "スキャンがタイムアウトしました。より小さなサイトか深度を下げてお試しください。"
+  },
+  "footer": {
+    "poweredBy": "Powered by DenseMatrix"
+  }
+}

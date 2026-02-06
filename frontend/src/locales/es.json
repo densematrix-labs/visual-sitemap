@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "Escáner de Mapa del Sitio Visual",
+    "tagline": "Mapea el ADN de tu sitio web"
+  },
+  "input": {
+    "placeholder": "Introduce la URL del sitio (ej: https://example.com)",
+    "scan": "ESCANEAR",
+    "scanning": "ESCANEANDO...",
+    "depth": "Profundidad",
+    "maxPages": "Máx. Páginas"
+  },
+  "result": {
+    "pages": "Páginas",
+    "links": "Enlaces",
+    "time": "Tiempo",
+    "seconds": "seg"
+  },
+  "graph": {
+    "zoom": "Desplázate para zoom • Arrastra para mover",
+    "nodeInfo": "Haz clic en un nodo para ver detalles"
+  },
+  "node": {
+    "url": "URL",
+    "title": "Título",
+    "depth": "Profundidad",
+    "outgoing": "Enlaces salientes",
+    "incoming": "Enlaces entrantes"
+  },
+  "export": {
+    "json": "Exportar JSON",
+    "reset": "Nuevo Escaneo"
+  },
+  "error": {
+    "invalidUrl": "Por favor, introduce una URL válida",
+    "crawlFailed": "Error en el escaneo. Por favor, inténtalo de nuevo.",
+    "timeout": "Tiempo de escaneo agotado. Intenta con un sitio más pequeño o menor profundidad."
+  },
+  "footer": {
+    "poweredBy": "Desarrollado por DenseMatrix"
+  }
+}

@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Terminal color palette */
+  --bg-deep: #0a0e14;
+  --bg-surface: #0d1117;
+  --bg-elevated: #161b22;
+  --bg-hover: #21262d;
+  
+  /* Phosphor green (primary) */
+  --phosphor: #00ff9f;
+  --phosphor-dim: #00cc7f;
+  --phosphor-glow: rgba(0, 255, 159, 0.15);
+  --phosphor-text: #7affcb;
+  
+  /* Amber accent */
+  --amber: #ffb300;
+  --amber-dim: #cc8f00;
+  --amber-glow: rgba(255, 179, 0, 0.15);
+  
+  /* Error/Warning */
+  --error: #ff6b6b;
+  --warning: #ffd93d;
+  
+  /* Text */
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #484f58;
+  
+  /* Scanlines */
+  --scanline-color: rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-display: 'Space Mono', monospace;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-mono);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Scanline overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--scanline-color) 2px,
+    var(--scanline-color) 4px
+  );
+  opacity: 0.3;
+}
+
+/* CRT glow effect on container */
+#root {
+  position: relative;
+}
+
+#root::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 9998;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--phosphor-dim);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--phosphor);
+}
+
+/* Selection */
+::selection {
+  background: var(--phosphor);
+  color: var(--bg-deep);
+}
+
+/* Links */
+a {
+  color: var(--phosphor);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 8px var(--phosphor-glow);
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--phosphor);
+  outline-offset: 2px;
+}
+
+/* Inputs */
+input, select {
+  font-family: var(--font-mono);
+  background: var(--bg-surface);
+  border: 1px solid var(--text-muted);
+  color: var(--text-primary);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--phosphor);
+  box-shadow: 0 0 0 1px var(--phosphor), 0 0 12px var(--phosphor-glow);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Utility classes */
+.text-phosphor {
+  color: var(--phosphor);
+}
+
+.text-amber {
+  color: var(--amber);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.terminal-border {
+  border: 1px solid var(--phosphor-dim);
+  box-shadow: 
+    0 0 1px var(--phosphor),
+    inset 0 0 20px var(--phosphor-glow);
+}
+
+/* Blink animation for cursor effects */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Scan animation */
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Glow animation */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--phosphor-glow), 0 0 10px var(--phosphor-glow);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--phosphor-glow), 0 0 20px var(--phosphor-glow), 0 0 30px var(--phosphor-glow);
+  }
+}

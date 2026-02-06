@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "Visueller Sitemap-Scanner",
+    "tagline": "Kartieren Sie die DNA Ihrer Website"
+  },
+  "input": {
+    "placeholder": "Website-URL eingeben (z.B. https://example.com)",
+    "scan": "SCANNEN",
+    "scanning": "SCANNE...",
+    "depth": "Crawl-Tiefe",
+    "maxPages": "Max. Seiten"
+  },
+  "result": {
+    "pages": "Seiten",
+    "links": "Links",
+    "time": "Scanzeit",
+    "seconds": "Sek."
+  },
+  "graph": {
+    "zoom": "Scrollen zum Zoomen • Ziehen zum Verschieben",
+    "nodeInfo": "Knoten anklicken für Details"
+  },
+  "node": {
+    "url": "URL",
+    "title": "Titel",
+    "depth": "Tiefe",
+    "outgoing": "Ausgehende Links",
+    "incoming": "Eingehende Links"
+  },
+  "export": {
+    "json": "JSON exportieren",
+    "reset": "Neuer Scan"
+  },
+  "error": {
+    "invalidUrl": "Bitte geben Sie eine gültige URL ein",
+    "crawlFailed": "Scan fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "timeout": "Scan-Timeout. Versuchen Sie eine kleinere Website oder geringere Tiefe."
+  },
+  "footer": {
+    "poweredBy": "Powered by DenseMatrix"
+  }
+}

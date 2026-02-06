@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "Scanner de Plan de Site Visuel",
+    "tagline": "Cartographiez l'ADN de votre site"
+  },
+  "input": {
+    "placeholder": "Entrez l'URL du site (ex: https://example.com)",
+    "scan": "SCANNER",
+    "scanning": "ANALYSE...",
+    "depth": "Profondeur",
+    "maxPages": "Max. Pages"
+  },
+  "result": {
+    "pages": "Pages",
+    "links": "Liens",
+    "time": "Durée",
+    "seconds": "sec"
+  },
+  "graph": {
+    "zoom": "Défilez pour zoomer • Glissez pour déplacer",
+    "nodeInfo": "Cliquez sur un nœud pour les détails"
+  },
+  "node": {
+    "url": "URL",
+    "title": "Titre",
+    "depth": "Profondeur",
+    "outgoing": "Liens sortants",
+    "incoming": "Liens entrants"
+  },
+  "export": {
+    "json": "Exporter JSON",
+    "reset": "Nouveau Scan"
+  },
+  "error": {
+    "invalidUrl": "Veuillez entrer une URL valide",
+    "crawlFailed": "Échec du scan. Veuillez réessayer.",
+    "timeout": "Délai d'attente dépassé. Essayez un site plus petit ou une profondeur réduite."
+  },
+  "footer": {
+    "poweredBy": "Propulsé par DenseMatrix"
+  }
+}

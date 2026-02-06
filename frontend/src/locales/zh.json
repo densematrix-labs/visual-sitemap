@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "可视化站点地图扫描器",
+    "tagline": "解码你的网站 DNA"
+  },
+  "input": {
+    "placeholder": "输入网站 URL（例如：https://example.com）",
+    "scan": "扫描",
+    "scanning": "扫描中...",
+    "depth": "爬取深度",
+    "maxPages": "最大页面数"
+  },
+  "result": {
+    "pages": "页面",
+    "links": "链接",
+    "time": "扫描耗时",
+    "seconds": "秒"
+  },
+  "graph": {
+    "zoom": "滚轮缩放 • 拖拽平移",
+    "nodeInfo": "点击节点查看详情"
+  },
+  "node": {
+    "url": "URL",
+    "title": "标题",
+    "depth": "深度",
+    "outgoing": "出链数",
+    "incoming": "入链数"
+  },
+  "export": {
+    "json": "导出 JSON",
+    "reset": "重新扫描"
+  },
+  "error": {
+    "invalidUrl": "请输入有效的 URL",
+    "crawlFailed": "扫描失败，请重试。",
+    "timeout": "扫描超时。请尝试更小的网站或降低深度。"
+  },
+  "footer": {
+    "poweredBy": "由 DenseMatrix 驱动"
+  }
+}

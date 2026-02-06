@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: sitemap-backend
+    restart: unless-stopped
+    environment:
+      - DEBUG=false
+      - MAX_PAGES=100
+      - MAX_DEPTH=3
+    networks:
+      - sitemap-network
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\""]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  frontend:
+    build: ./frontend
+    container_name: sitemap-frontend
+    restart: unless-stopped
+    ports:
+      - "3060:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - sitemap-network
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+
+networks:
+  sitemap-network:
+    driver: bridge
