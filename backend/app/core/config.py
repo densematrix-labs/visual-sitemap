@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     TOTAL_TIMEOUT: int = 300  # seconds for entire crawl
     
     # Database
-    DATABASE_URL: str = "sqlite+aiosqlite:///./app.db"
+    DATABASE_URL: str = "sqlite+aiosqlite:///./data/app.db"
     
     # Creem Payment
     CREEM_API_KEY: str = ""

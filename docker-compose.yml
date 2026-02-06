@@ -5,10 +5,16 @@ services:
     build: ./backend
     container_name: sitemap-backend
     restart: unless-stopped
+    ports:
+      - "8006:8000"
+    env_file:
+      - .env
     environment:
       - DEBUG=false
       - MAX_PAGES=100
       - MAX_DEPTH=3
+    volumes:
+      - ./data:/app/data
     networks:
       - sitemap-network
     healthcheck:
